@@ -3,9 +3,15 @@ package com.educandoweb.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="tb_user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @jakarta.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     private String name;
     private String email;
